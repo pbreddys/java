@@ -20,8 +20,9 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    - task: DownloadBuildArtifacts@0
-      inputs:
+
+- task: DownloadBuildArtifacts@0
+  inputs:
         buildType: 'current'
         downloadType: 'single'
         downloadPath: '$(System.ArtifactsDirectory)'
